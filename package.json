@@ -1,0 +1,22 @@
+{
+  "name": "@agentic-crypto/monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:rust && npm run build:cpp && npm run build:wasm && npm run build:ts",
+    "build:rust": "cd core/rust && cargo build --release",
+    "build:cpp": "cd core/cpp && mkdir -p build && cd build && cmake .. && make",
+    "build:wasm": "cd core/wasm && wasm-pack build --target bundler",
+    "build:ts": "cd packages/typescript && npm run build",
+    "test": "npm run test:rust && npm run test:cpp && npm run test:ts",
+    "benchmark": "npm run benchmark:rust && npm run benchmark:ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}

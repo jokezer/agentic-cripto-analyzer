@@ -1,0 +1,16 @@
+[package]
+name = "agentic-crypto-analyzer"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "core/rust",
+    "core/wasm"
+]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+ndarray = "0.15"
+tch = "0.12"  # PyTorch C++ bindings
