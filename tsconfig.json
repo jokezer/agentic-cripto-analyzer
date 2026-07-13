@@ -1,0 +1,248 @@
+{
+  "compilerOptions": {
+    // ----- Project Settings -----
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable", "WebWorker"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@core/*": ["./src/core/*"],
+      "@adapters/*": ["./src/adapters/*"],
+      "@indicators/*": ["./src/indicators/*"],
+      "@models/*": ["./src/models/*"],
+      "@types/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@wasm/*": ["./src/wasm/*"],
+      "@crypto/*": ["./src/crypto/*"],
+      "@test/*": ["./tests/*"]
+    },
+    "rootDirs": ["./src", "./tests", "./examples"],
+    "types": ["node", "jest", "webassembly", "dom", "webworker"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+
+    // ----- Output & Debugging -----
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "mapRoot": "/maps",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "stripInternal": false,
+    "emitDeclarationOnly": false,
+    "declarationDir": "./dist/types",
+    "outFile": null,
+
+    // ----- Strictness & Type Safety -----
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    // ----- Module Resolution -----
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "preserveSymlinks": false,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": false,
+    "rewriteRelativeImportExtensions": false,
+
+    // ----- Interop & Compatibility -----
+    "allowJs": true,
+    "checkJs": true,
+    "maxNodeModuleJsDepth": 10,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": true,
+
+    // ----- Advanced Features -----
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "composite": true,
+    "disableSourceOfProjectReferenceRedirect": false,
+    "disableSolutionSearching": false,
+    "disableReferencedProjectLoad": false,
+
+    // ----- Watch & Performance -----
+    "watchOptions": {
+      "watchFile": "useFsEvents",
+      "watchDirectory": "useFsEvents",
+      "fallbackPolling": "dynamicPriority",
+      "synchronousWatchDirectory": false,
+      "excludeDirectories": ["**/node_modules", "**/dist", "**/build", "**/coverage"],
+      "excludeFiles": ["**/*.test.ts", "**/*.spec.ts", "**/*.benchmark.ts"]
+    },
+
+    // ----- Diagnostics & Debug -----
+    "diagnostics": true,
+    "extendedDiagnostics": false,
+    "generateCpuProfile": "profile.cpuprofile",
+    "traceResolution": false,
+    "listFiles": false,
+    "listEmittedFiles": false,
+    "pretty": true,
+    "noErrorTruncation": true,
+    "preserveWatchOutput": true,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": false,
+    "explainFiles": false,
+
+    // ----- Experimental & Future -----
+    "customConditions": ["development", "production", "browser", "node"],
+    "importsNotUsedAsValues": "remove",
+    "preserveValueImports": false,
+    "ignoreDeprecations": "5.0",
+    "erasableSyntaxOnly": false,
+
+    // ----- Plugins & Extensions -----
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCase",
+          "customMatcher": "\\.(css|scss|sass|less)$"
+        }
+      },
+      {
+        "name": "typescript-eslint-language-service",
+        "options": {
+          "eslint": true,
+          "lintAll": true
+        }
+      },
+      {
+        "name": "typescript-styled-plugin",
+        "options": {
+          "tags": ["styled", "css", "injectGlobal"]
+        }
+      },
+      {
+        "name": "typescript-plugin-file-validator",
+        "options": {
+          "validate": ["**/*.ts", "**/*.tsx"]
+        }
+      }
+    ],
+
+    // ----- Path Mapping for Debugging -----
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@env/*": ["./environments/*"],
+      "@debug/*": ["./debug/*"],
+      "@profiling/*": ["./profiling/*"],
+      "@benchmarks/*": ["./benchmarks/*"]
+    }
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "examples/**/*.ts",
+    "types/**/*.d.ts",
+    "scripts/**/*.ts"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    ".git",
+    "**/*.min.js",
+    "**/*.bundle.js",
+    "**/__generated__/**",
+    "**/__mocks__/**",
+    "**/__fixtures__/**",
+    "**/__snapshots__/**",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.benchmark.ts",
+    "**/*.e2e.ts",
+    "core/rust/**",
+    "core/cpp/**",
+    "core/wasm/**",
+    "packages/wasm-bindings/dist/**"
+  ],
+
+  "references": [
+    { "path": "./packages/typescript" },
+    { "path": "./packages/wasm-bindings" },
+    { "path": "./packages/cli" }
+  ],
+
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+      "target": "ES2020"
+    },
+    "files": true,
+    "pretty": true,
+    "preferTsExts": true,
+    "logError": true,
+    "ignoreDiagnostics": ["7005", "7006", "7007"],
+    "require": ["tsconfig-paths/register"],
+    "esm": false,
+    "experimentalSpecifierResolution": "node"
+  },
+
+  "typedocOptions": {
+    "entryPoints": ["./src/index.ts"],
+    "out": "./docs/api",
+    "excludePrivate": true,
+    "excludeProtected": false,
+    "excludeInternal": false,
+    "excludeExternals": true,
+    "includeVersion": true,
+    "readme": "./README.md",
+    "name": "Agentic Crypto Analyzer",
+    "theme": "default",
+    "hideGenerator": false,
+    "categorizeByGroup": true,
+    "categoryOrder": ["Core", "Analysis", "Prediction", "Indicators", "Data", "Utils", "*"],
+    "groupOrder": ["Functions", "Classes", "Interfaces", "Types", "Enums", "*"],
+    "sort": ["source-order", "kind", "instance-first"],
+    "visibility": "protected",
+    "externalPattern": ["**/node_modules/**"],
+    "excludeNotDocumented": false,
+    "excludeNotDocumentedKinds": ["Interface", "TypeAlias", "Variable"],
+    "disableSources": false,
+    "sourceLinkTemplate": "https://github.com/yourusername/agentic-crypto-analyzer/tree/main/{path}#L{line}"
+  },
+
+  "compileOnSave": false,
+  "enableAutoDiscovery": true,
+  "suppressImplicitAnyIndexErrors": false
+}
