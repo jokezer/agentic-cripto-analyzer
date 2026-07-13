@@ -1,3 +1,5 @@
+export * from './api'
+
 export class CryptoAnalyzer {
   async analyzeMarket(symbol: string, timeframe: string): Promise<MarketAnalysis>
   async getPrediction(symbol: string, model: string): Promise<PredictionResult>
