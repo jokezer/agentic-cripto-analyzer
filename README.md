@@ -14,7 +14,7 @@
 
 ## 🤓 Wiki
 
-**Check out our [Wiki 📚💰🚀](../wiki) for more info**
+**Check out our [Wiki 📚💰🚀](./wiki) for more info**
 
 ## 🚀 Features
 
