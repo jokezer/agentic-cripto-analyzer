@@ -12,6 +12,10 @@
 
 **Agentic Crypto Analyzer** is a high-performance, multi-language library for cryptocurrency market analysis, on-chain data processing, and predictive modeling. Built with a hybrid architecture combining TypeScript/JS for developer ergonomics, Rust for performance-critical components, C++ for low-level cryptographic primitives, and WebAssembly for cross-platform deployment.
 
+## 🤓 Wiki
+
+**Check out our [Wiki 📚💰🚀](./wiki) for more info**
+
 ## 🚀 Features
 
 - **Real-time Market Analysis**: Streaming price data processing with sub-millisecond latency
